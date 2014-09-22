@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Mccombsp-kingco.github.io by mccombsp-kingco</title>
+    <title>FOSS4G Conference Notes - mccombsp-kingco.github.io</title>
   </head>
 
   <body>
@@ -166,7 +166,36 @@
           </div>
           <h2>Session 3</h2>
           <h3>Invited Talk: Making Space for Diverse Mappers - Alyssa Wright, MapZen</h3>
+          <div>
+            <ul>
+              <li>A call to make Open Geography community more diverse and welcoming of diverse mappers.</li>
+              <li>Identify awkward moments and know that you are experiencing diversity. Do not try to avoid awkward moments.</li>
+              <li>Who is weird? Everyone</li>
+              <li>Admonition: &quot;Get your head out of your code!&quot;</li>
+            </ul>
+          </div>
           <h3>Track 2: Client-side versus server-side geoprocessing: Benchmarking the performance of web browsers processing geospatial data using common GIS operations. - Erin Hamilton, University of Wisconsin-Madison</h3>
+          <div>
+          <ul>
+            <li>Testing suite based on <a href="http://www.vividsolutions.com/jts/JTSHome.htm">JTS</a></li>
+            <li>Tested randomized data sets sized up to 3.8MB</li>
+            <li>Tested multiple browsers and multiple OSes</li>
+            <li>Machines had different specs but results were normalized using Geek Bench results</li>
+            <li>Results:
+              <ul>
+                <li>IE and Safari were slowest browsers on client side</li>
+                <li>Firefox could process 30,000+ vertices, no other browsers could</li>
+                <li>Server at least an order of magnitude faster than any browser</li>
+                <li>With a 1 second wait tolerance, could process ~1k vertices</li>
+                <li>With a 10 second wait tolerance, could process ~10k vertices</li>
+              </ul>
+            </li>
+            <li>Conclusion: Sever was faster. The server was a &quot;medium&quot; Amazon server instance.</li>
+            <li>Testing was with only 1 simultaneous user</li>
+            <li>Details in <a href="http://erinhamilton.me/portfolio/Erin_Hamilton_Masters_Thesis.pdf">masters thesis</a></li>
+            <li>Several developers in the audience were skeptical of results being so poor in the client side browsers. These are likely the people writing the JavaScript tools that were being tested. Speakers defense was that the analysis being tested was implemented using the online documentation that is currently available for these tools.</li>
+          </ul>
+          </div>
           <h1>Thursday</h1>
           <h2>Keynote: Sarah Novotny, NGINX</h2>
           <h2>Session 1</h2>
