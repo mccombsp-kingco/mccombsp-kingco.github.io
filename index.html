@@ -310,15 +310,17 @@
                 </ul>
               </li>
               <li>OGR Virtual format</li>
+              <li>OGR Tools - Python Library
                 <ul>
                   <li>QGIS Plugin without additional downloads</li>
-                  <li><code>pip install ogrtools</code></li>
-                  <li>ogr -h</li>
-                  <li>ogr sql example.shp "SELECT * from example_table"</li>
-                  
-                  <li>Multiple geometry fields newer versions</li>
+                  <li><div><code>pip install ogrtools <br>
+                    ogr -h <br>
+                    ogr sql example.shp "SELECT * from example_table"<br>
+                    ogr genconfig -format GeoJSON example.shp<br>
+                    ogr transform --config ex.config example.JSON example.shp
+                  </code></div></li>
+                  <li><a href="https://github.com/sourcepole/ogrtools">github repository</a></li>
                 </ul>
-              <li>OGR Tools - Python Library
               </li>
             </ul>
           </div>
