@@ -20,7 +20,7 @@
     <header>
       <div class="inner">
         <h1>2014 FOSS4G</h1>
-        <h2>Notes from the conference talks I attended. Videos of the talks are linked from the titles.</h2>
+        <h2>Notes from the conference talks I attended. Videos of the talks are linked from the titles. <a href="peter.html>>hi peter</a></h2>
         <a href="https://github.com/mccombsp-kingco" class="button"><small>Follow me on</small>GitHub</a>
       </div>
     </header>
@@ -344,6 +344,8 @@
               <li>To convert an existing column user <code>ALTER</code> rather than <code>DROP</code> for performance</li>
               <li>Don't forget to create spatial indices</li>
               <li>To determine proximity, <code>ST_Distance</code> is slow, it doesn't utilize spatial indices. <code>ST_DWithin</code> gives better performance it does use spatial indices</li>
+              <li>To count records don't query for all the records and then count them, just count them it's faster</li>
+              <li>Cr
             </ul>
           </div>
           <h3>Track 3: <a href="http://vimeo.com/106845256">Open source, open standards and 50 lines of code: A look behind GitHub’s GeoJSON rendering and diffing</a> - Ben Balter, GitHub</h3>
