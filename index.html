@@ -330,13 +330,20 @@
               <li>Backend is mongo DB - provides &quot;awesome&quot; full text search</li>
               <li>Tech used: Node.js, MongoDB/spatial, AWS S3 and SES</li>
               <li>Originally used Leaflet with Cluster Mark Plugin, but it is slow with over 10,000 features. Processing is done on the client side.</li>
-              <li>Switched to server side leaflet used to push geoJSON to MongoDB. Clusters are pre-generated at various zoom scales and cached in MongoDB. Used $geo &quot;within&quot;</li>
+              <li>Switched to server side leaflet used to push geoJSON to MongoDB. Clusters are pre-generated at various zoom scales and cached in MongoDB nightly. Used $geo &quot;within&quot;</li>
+              <li>Considering switching to GeoTools for real time clustering</li>
+              <li>PostGIS has a clustering data type that could be useful for this project</li>
+              <li>GeoServer has a feature called point stacker that could also be useful</li>
             </ul>
           </div>
           <h3>Track 4: <a href="http://vimeo.com/106846193">Writing better PostGIS queries</a> - Regina Obe, Paragon Corporation</h3>
           <div>
             <ul>
-              <li>
+              <li>Describing PostgreSQL 9.3 (with H-Store and PostGIS 2.1</li>
+              <li>Using Open Street Map with data for examples</li>
+              <li>To convert an existing column user <code>ALTER</code> rather than <code>DROP</code> for performance</li>
+              <li>Don't forget to create spatial indices</li>
+              <li>To determine proximity, <code>ST_Distance</code> is slow, it doesn't utilize spatial indices. <code>ST_DWithin</code> gives better performance it does use spatial indices</li>
             </ul>
           </div>
           <h3>Track 3: <a href="http://vimeo.com/106845256">Open source, open standards and 50 lines of code: A look behind GitHub’s GeoJSON rendering and diffing</a> - Ben Balter, GitHub</h3>
