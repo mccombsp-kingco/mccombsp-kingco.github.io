@@ -338,6 +338,7 @@
           </div>
           <h3>Track 4: <a href="http://vimeo.com/106846193">Writing better PostGIS queries</a> - Regina Obe, Paragon Corporation</h3>
           <div>
+            Consider reading <a href="http://www.postgis.us/">her book</a>. The tips in the presentation seemed excellent.
             <ul>
               <li>Describing PostgreSQL 9.3 (with H-Store and PostGIS 2.1</li>
               <li>Using Open Street Map with data for examples</li>
@@ -345,7 +346,13 @@
               <li>Don't forget to create spatial indices</li>
               <li>To determine proximity, <code>ST_Distance</code> is slow, it doesn't utilize spatial indices. <code>ST_DWithin</code> gives better performance it does use spatial indices</li>
               <li>To count records don't query for all the records and then count them, just count them it's faster</li>
-              <li>Cr
+              <li>Create a compound GiST index if you are querying spatial and attribute indices at the same time.</li>
+              <li>Don't use web mercator for proximity analysis because of distance distortion. You can do a distance witha cast to geography. Also, could do buffer in geography, the transform buffer to mercator and intersect.</li>
+              <li>You can create a geography based spatial index.</li>
+              <li>N nearest neighborss. Use k-nearest-neighbors geometries to utilize index in the order by clause. Only uses bounding box, not detailed geometry.</li>
+              <li>Lateral clause is new. I'm not sure what that is</li>
+              <li>Segmentizea linestring in geography to avoid projection errors.</li>
+              <li>Raster tip: Clip first, then union</li>              
             </ul>
           </div>
           <h3>Track 3: <a href="http://vimeo.com/106845256">Open source, open standards and 50 lines of code: A look behind GitHub’s GeoJSON rendering and diffing</a> - Ben Balter, GitHub</h3>
